@@ -45,6 +45,6 @@ resource "null_resource" "tag_release" {
     push_trigger = "${github_repository.repo_dest.name}"
   }
   provisioner "local-exec" {
-    command = "cd ${var.repo_dir}/${var.sub_dir}; git tag -a 1.0.0 -m 'initial release'; git push -u origin 1.0.0"
+    command = "cd ${var.repo_dir}; git tag -a 1.0.0 -m 'initial release'; git push -u origin 1.0.0"
   }
 }
