@@ -9,3 +9,8 @@ output "http_clone_url" {
 output "repo_name" {
     value = "${github_repository.repo_dest.full_name}"
 }
+
+
+output "repo_dest" {
+    value = "${var.repo_dest}"
+}
